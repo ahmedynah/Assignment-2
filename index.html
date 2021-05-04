@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Title</title>
+</head>
+
+<body class="body_style">
+    <div class="container-fluid basic h-100">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center font-weight-bold"> Speed Reader</h1>
+                <div class="form-group d-flex justify-content-center">
+                    <div class="h-100 position-relative" style="left: 50% ">|</div>
+                    <p class=" firstBox" name="showingArea" id="showingArea" rows="3">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row w-75 mx-auto">
+
+            <div class="col-md-4">
+                <h5 class="sub_headings">Play Controls:</h5>
+                <button type="button" name="startbtn" id="startBtn" class="btns" btn-lg btn-block">Start</button>
+                <button type="button" name="stopbtn" id="stopBtn" class="btns" btn-lg btn-block" disabled>Stop</button>
+            </div>
+
+            <div class="col-md-4">
+                <h5  class="sub_headings">Speed:</h5>
+                <select class="browser-default custom-select"  name="speed">
+                    <option value="500">50 wpm</option>
+                    <option value="200">300 wpm</option>
+                    <option value="171"selected>350 wpm</option>
+                    <option value="150">400 wpm</option>
+                    <option value="133">450 wpm</option>
+                    <option value="120">500 wpm</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="sub_headings">Size:</h5>
+                <div class="form-check form-check-inline w-100 d-flex justify-content-around"> <!-- adding the radio button inside
+                     the label tag makes the label itself is clickable too. Cool feature :)-->
+                    <label><input class="form-check-input" type="radio" name="textSize" id="" value="Medium" checked> Medium </label>
+                    <label><input class="form-check-input" type="radio" name="textSize" id="" value="Big"> Big</label>
+                    <label><input class="form-check-input" type="radio" name="textSize" id="" value="Bigger"> Bigger</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mx-auto" style="width: 90%;">
+            <div class="col-md-12">
+                <h5 class="sub_headings">Input Text</h5>
+                <div class="form-group">
+                    <textarea class="form-control secondBox" name="inputArea" id="inputArea" rows="10" cols="80"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    <strong>Caution:</strong>
+                    <p> writing should be in write punctuation, things like 
+                        leaving space between a word and a period is considered 
+                        wrong and may result in undefined
+                        also, the punctuation removed and make
+                         the word show for twice the time are as 
+                         descriped in the assignment: ==> , . : ; ? !
+                    </p>
+                </div>
+                <div class="alert alert-primary" role="alert">
+                    <strong>Info:</strong>
+                    <p> there is a small bar in the area of reading to 
+                        indicate that the center character and to show that it is dynamic with whatever length</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

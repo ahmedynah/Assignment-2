@@ -1,0 +1,42 @@
+.body_style{
+    height: 100vh;
+}
+.basic{
+    background-color:#EAF6F6 ;
+    font-family: Garamond;
+    font-size: 12pt;
+}
+.firstBox{
+    width:80%;
+    height: 200px;
+    margin: 10px auto 10px auto;
+    border: 2px solid #8EBEBE;
+    border-radius:5px ;
+    background-color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 32pt;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+.sub_headings{
+font-weight: bold;
+text-align: left;
+border-bottom: 1px solid #8EBEBE;
+width: 100%;
+padding: 2px;
+}
+.secondBox{
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.btns{
+    background-color: white;
+    border: 1px solid gray;
+    width: 70px;
+}
+.btns:disabled{
+    background-color: lightgray;
+}
