@@ -17,8 +17,8 @@ let sizeRadioBtn = document.getElementsByName("textSize");
 //speed options
 let speedOptions = document.querySelector("select");
 
-let firstRun = true;
-let paused = false;
+let firstRun = true;// to indicate the first run
+let paused = false; // to give indication when paused
 /**
  *  Helper Variables
  */
@@ -46,6 +46,9 @@ let updateShowArea = () => {
   }
 };
 
+/**
+ * initial options
+ */
 let startingCond = () => {
   startBtn.disabled = false;
   inputText.disabled = false;
@@ -124,6 +127,12 @@ let getText = () => {
   index == words.length ? (index = 0) : 0;
 };
 
+/**
+ * selects the right center and returns a text with the 
+ * new html to be inserted
+ * @param {sting} word :current word
+ * @returns text to be inner html
+ */
 let centerLetter = (word) => {
   let child;
   if (word.length > 13) child = stringCentringFormat(word, 5);
@@ -136,6 +145,14 @@ let centerLetter = (word) => {
   return child;
 };
 
+/**
+ * puts the word in the desired format ( center is colored and 
+ * text is centered based on the length of the word and the 
+ * center index)
+ * @param {string} word : the current word
+ * @param {number} centerIndex : the center index
+ * @returns the new word formatted in the desired shape
+ */
 let stringCentringFormat = (word, centerIndex) => {
   let length = word.length;
   let allChar = word.split("");
@@ -149,6 +166,13 @@ let stringCentringFormat = (word, centerIndex) => {
   return text;
 };
 
+/**
+ *  this function  adds spaces to the shorter part of the word to
+ * help centering it
+ * @param {number} center : the index of the center character
+ * @param {number} length : the length of the word
+ * @returns a string of space to be inserted before the word
+ */
 let addSpaces = (center, length) => {
   let addedSpaces = "";
   for (let i = 0; i < length + 1 - 2 * center; i++) addedSpaces += "&nbsp";
@@ -156,9 +180,9 @@ let addSpaces = (center, length) => {
 };
 
 /**
- *
+ * this function colors the center character
  * @param {char} letter
- * @returns
+ * @returns the center colored letter inside span element
  */
 let coloringTheCenterChar = (letter) => {
   let child = '<span style="color: red">' + letter + "</span>";
